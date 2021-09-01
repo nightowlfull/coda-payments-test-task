@@ -7,7 +7,7 @@ variable "cluster_name" {
 }
 
 variable "environment" {
-  default = "dev2"
+  default = "dev"
 }
 
 variable "application" {
