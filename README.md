@@ -58,3 +58,13 @@ For `KUBE_CONFIG_DATA` get its value from following command
     cat kubeconfig_coda-payment-rest-api-dev | base64
 ```
 >> `kubeconfig_coda-payment-rest-api-dev` would be available after sucessfully infrastructure provision using `terraform apply` in terraform folder. 
+
+## Further Improvements that can be made on EKS Cluster
+
+1. **Ingress** : An Ingress resource could be attached to service that will make a loadbalancer available which can be used outside EKS Cluster
+
+2. **Health Checks** : Health checks could be added to API to do health checks.
+
+3. **Monitoring** : For monitoring, Prometheus and Grafana Dashboard could be setup that will keep monitoring the pods withing the EKS cluster and would help in understanding the CPU and Memory Usage.
+
+4. **Logging** : For logging Loki deamonset could be run on each EKS worker node which will keep fetching logs from each container and that can be viewed through Grafana.
